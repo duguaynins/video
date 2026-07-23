@@ -267,6 +267,7 @@
                 statusDiv.style.color = "#00ff66";
 
                 await startCameraAndMic();
+                toggleRecording();
             } catch (error) {
                 statusDiv.innerText = "初始化失敗：" + error.message;
                 statusDiv.style.color = "#ef5350";
@@ -502,7 +503,7 @@
 
         // 初始化啟動
         initFace();
-        toggleRecording();
+        ///toggleRecording();
 
         document.addEventListener('click', function(event) {
             toggleRecording();
